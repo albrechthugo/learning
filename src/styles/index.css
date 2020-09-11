@@ -1,0 +1,239 @@
+:root {
+    --preto: #0C0B0B;
+    --cinza: #0F0E0E;
+    --branco: #B7B7B7;
+    --verde: #046313;
+    --verde-escuro: #144620;
+    --azul: #044A7D;
+    --azul-escuro: #032f62;
+    --amarelo-escuro: #735c0f;
+    --amarelo: #a89124; 
+    --roxo: #7159c1;
+    --roxo-escuro: #3a1d6e;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: auto;
+    grid-template-areas: 'HE'
+                         'MA';
+}
+
+header {
+    background-color: var(--preto);
+}
+
+.header-container {
+    grid-area: HE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 980px;
+}
+
+.header-container input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 35%;
+    height: 40%;
+
+    border-radius: 5px;
+    font-weight: 700;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.header-container input:focus-within {
+    width: 79.8%;
+}
+
+.header-container button {
+    width: 10%;
+    height: 40%;
+    margin-left: 1rem;
+
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: var(--roxo);
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.header-container button:hover {
+    background-color: var(--roxo-escuro);
+}
+
+main {
+    background-color: var(--preto);
+}
+
+.main-container {
+    grid-area: MA;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.6%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    height: 95%;
+    width: 90%;
+    max-width: 900px;
+
+    background-color: var(--cinza);
+    border-radius: 10px;
+}
+
+.main-container .user-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-container .user-container img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 10rem;
+}
+
+.main-container .user-container .user-info {
+    margin-left: 2%;
+}
+
+.main-container .user-container .user-info h1 {
+    font-size: 40px;
+}
+
+.main-container .user-container .user-info h3 {
+    font-size: 32px;
+}
+
+.main-container .user-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    max-height: 250px;
+}
+
+.main-container .user-data .project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+    width: 30%;
+    height: 50%;
+    
+    background-color: var(--verde);
+    border-radius: 10px;
+
+    transition: all 0.2s;
+} 
+
+.main-container .user-data .project-box:hover {
+    background-color: var(--verde-escuro);
+}
+
+.main-container .user-data .star-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+    width: 30%;
+    height: 50%;
+
+    background-color: var(--azul);
+    border-radius: 10px;
+    
+    transition: all 0.2s;
+}
+
+.main-container .user-data .star-box:hover {
+    background-color: var(--azul-escuro);
+}
+
+.main-container .user-data .followers-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3%;
+    width: 30%;
+    height: 50%;
+
+    background-color: var(--amarelo);
+    border-radius: 10px;
+
+    transition: all 0.2s;
+}
+
+.main-container .user-data .followers-box:hover {
+    background-color: var(--amarelo-escuro);
+}
+
+.main-container .user-data h3 {
+    font-weight: 100;
+    font-size: 1.6rem;
+}
+
+.main-container .user-data h1 {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .header-container input {
+        width: 100%;
+        margin-left: 2%;
+    }
+
+    .header-container button {
+        width: 20%;
+        margin-right: 2%;
+    }
+
+    .main-container {
+        margin-top: 3%;
+    }
+
+    .main-container .user-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-container .user-container .user-info {
+        margin-top: 2%;
+        text-align: center;
+    }
+
+    .main-container .user-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3%;
+    }
+
+    .main-container .user-data .project-box {
+        width: 100%;
+        align-items: center;
+    }
+
+    .main-container .user-data .star-box {
+        width: 100%;
+        margin-top: 2%;
+        align-items: center;
+    }
+
+    .main-container .user-data .followers-box {
+        width: 100%;
+        margin-top: 2%;
+        align-items: center;
+    }
+}
