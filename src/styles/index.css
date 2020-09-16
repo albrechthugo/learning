@@ -1,15 +1,19 @@
 :root {
     --preto: #0C0B0B;
     --cinza: #0F0E0E;
-    --branco: #B7B7B7;
+    --branco: #fff;
     --verde: #046313;
     --verde-escuro: #144620;
-    --azul: #044A7D;
+    --azul: #5E81AC;
     --azul-escuro: #032f62;
     --amarelo-escuro: #735c0f;
     --amarelo: #a89124; 
     --roxo: #7159c1;
     --roxo-escuro: #3a1d6e;
+    --body-background: #282a36;
+    --main-background: #44475a;
+    --vermelho: #ff5555;
+    --rosa: #ff79c6;
 }
 
 #container {
@@ -23,7 +27,7 @@
 }
 
 header {
-    background-color: var(--preto);
+    background-color: var(--body-background);
 }
 
 .header-container {
@@ -45,6 +49,7 @@ header {
     width: 35%;
     height: 40%;
 
+    color: var(--cinza);
     border-radius: 5px;
     font-weight: 700;
 
@@ -73,7 +78,7 @@ header {
 }
 
 main {
-    background-color: var(--preto);
+    background-color: var(--body-background);
 }
 
 .main-container {
@@ -89,7 +94,7 @@ main {
     width: 90%;
     max-width: 900px;
 
-    background-color: var(--cinza);
+    background-color: var(--main-background);
     border-radius: 10px;
 }
 
@@ -108,7 +113,7 @@ main {
     margin-left: 2%;
 }
 
-.main-container .user-container .user-info h1 {
+.main-container .user-container .user-info h1, a {
     font-size: 40px;
 }
 
@@ -132,17 +137,17 @@ main {
     width: 30%;
     height: 50%;
     
-    background-color: var(--verde);
+    background-color: var(--vermelho);
     border-radius: 10px;
 
     transition: all 0.2s;
 } 
 
 .main-container .user-data .project-box:hover {
-    background-color: var(--verde-escuro);
+    background-color: #f22;
 }
 
-.main-container .user-data .star-box {
+.main-container .user-data .location-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,14 +155,14 @@ main {
     width: 30%;
     height: 50%;
 
-    background-color: var(--azul);
+    background-color: var(--verde);
     border-radius: 10px;
     
     transition: all 0.2s;
 }
 
-.main-container .user-data .star-box:hover {
-    background-color: var(--azul-escuro);
+.main-container .user-data .location-box:hover {
+    background-color: var(--verde-escuro);
 }
 
 .main-container .user-data .followers-box {
@@ -168,14 +173,14 @@ main {
     width: 30%;
     height: 50%;
 
-    background-color: var(--amarelo);
+    background-color: var(--azul);
     border-radius: 10px;
 
     transition: all 0.2s;
 }
 
 .main-container .user-data .followers-box:hover {
-    background-color: var(--amarelo-escuro);
+    background-color: var(--azul-escuro);
 }
 
 .main-container .user-data h3 {
@@ -225,7 +230,7 @@ main {
         align-items: center;
     }
 
-    .main-container .user-data .star-box {
+    .main-container .user-data .location-box {
         width: 100%;
         margin-top: 2%;
         align-items: center;
